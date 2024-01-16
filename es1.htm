@@ -9,7 +9,7 @@
 
     <label for="NumInInpuit">Inserisci un numero:</label>
     <input type="number" id="NumInInpuit">
-    <button onclick="StampaInumeri()">Stampa Numeri</button>
+    <button onclick="StampaInumeri()">Stampa i vari Numeri</button>
 
     <div id="risultato"></div>
 
@@ -20,7 +20,7 @@
             risultatoDiv.innerHTML = ""; // Pulisce il contenuto precedente
 
             for (var i = 1; i <= NumInInpuit; i++) {
-                risultatoDiv.innerHTML += i + "<br>";
+                risultatoDiv.innerHTML += i + ",";
             }
 
             // Aggiunge il 10% del numero in fondo
