@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown e Tabelline</title>
+</head>
+<body>
+
+<div id="countdown"></div>
+
+<script>
+  var contatore = 5;
+
+  function avviaCountdown() {
+    var countdownDiv = document.getElementById("countdown");
+
+    var countdownInterval = setInterval(function() {
+      countdownDiv.innerHTML = contatore;
+      contatore--;
+
+      if (contatore < 0) {
+        clearInterval(countdownInterval);
+        countdownDiv.innerHTML = ""; // Rimuove il countdown
+        stampaTabelline();
+      }
+    }, 1000);
+  }
+
+  function stampaTabelline() {
+    var risultati = "<h2>Tabelline:</h2>";
+
+    for (var i = 1; i <= 10; i++) {
+      risultati += "<h3>Tabellina del " + i + ":</h3><ul>";
+
+      for (var j = 1; j <= 10; j++) {
+        risultati += "<li>" + i + " x " + j + " = " + (i * j) + "</li>";
+      }
+
+      risultati += "</ul>";
+    }
+
+    document.body.innerHTML += risultati;
+  }
+
+  avviaCountdown();
+</script>
+
+</body>
+</html>
