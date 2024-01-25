@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px; /* Margine tra i quadrati per migliorare la visualizzazione */
+    }
 
+    .square {
+      width: 10px;
+      height: 10px;
+      border: 1px solid #000; /* Colore del bordo (nero nel mio esempio) */
+    }
+
+    .square:nth-child(odd) {
+      background-color: lightblue; /* Colore di sfondo per i quadrati dispari */
+    }
+
+    .square:nth-child(even) {
+      background-color: lightcoral; /* Colore di sfondo per i quadrati pari */
+    }
+  </style>
+</head>
+<body>
+  <!-- 10 quadrati -->
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+</body>
+</html>
